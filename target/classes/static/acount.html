@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>身份验证</title>
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+<style type="text/css">
+#id1,#id2 {
+	margin-top: 50px;
+}
+
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<div class="row">
+				<div class="col-lg-2">
+					<img alt="logo" src="img/logo.png"
+						class="img-responsive">
+				</div>
+				<div class="col-lg-2">
+					<h5 class="text-success">身份验证</h5>
+				</div>
+			</div>
+		</div>
+		<div class="body">
+			<form action="estimate.html" role="details" class="form-horizontal">
+				<div class="form-group">
+					<label class="col-lg-4 control-label">姓名</label>
+					<div class="col-lg-4">
+						<input type="text" name="name" placeholder="姓名"
+							class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-4 control-label">身份证号</label>
+					<div class="col-lg-4">
+						<input type="text" name="identityno" placeholder="身份证号"
+							class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-4 control-label">性别</label>
+					<div class="col-lg-4">
+						<input type="text" name="gender" placeholder="性别"
+							class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-4 control-label">民族</label>
+					<div class="col-lg-4">
+						<input type="text" name="nation" placeholder="民族"
+							class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-4 control-label">证件地址</label>
+					<div class="col-lg-4">
+						<input type="text" name="address" placeholder="证件地址"
+							class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-4 control-label">签发机关</label>
+					<div class="col-lg-4">
+						<input type="text" name="awarddept" placeholder="签发机关"
+							class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-4 control-label">起始日期</label>
+					<div class="col-lg-4">
+						<input type="text" name="startdate" placeholder="起始日期"
+							class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-4 control-label">结束日期</label>
+					<div class="col-lg-4">
+						<input type="text" name="enddate" placeholder="结束日期"
+							class="form-control">
+					</div>
+				</div>
+				<div id="id1" class="form-group">
+					<label class="col-lg-4 sr-only"></label>
+					<div class="col-lg-8 col-lg-offset-4">
+						<input type="checkbox" name="autoaddress"><span class="text-danger">勾选则自动填写联系地址，取消则撤销自动填写的联系地址</span>
+					</div>	
+				</div>
+				<div class="form-group">
+					<label class="col-lg-4 control-label">联系地址</label>
+					<div class="col-lg-4">
+						<input type="text" name="domicile" placeholder="联系地址" class="form-control">
+					</div>
+				</div>	
+				<div class="form-group">
+					<label class="col-lg-4 control-label">邮编</label>
+					<div class="col-lg-4">
+						<input type="text" name="postcodes" placeholder="邮编" class="form-control">
+					</div>
+				</div>
+				<div id="id2" class="form-group">
+					<label class="col-lg-3 control-label">行业</label>
+					<div class="col-lg-3">
+						<input type="text" name="postcodes" placeholder="行业" class="form-control">
+					</div>
+					<label class="col-lg-1 control-label">职业</label>
+					<div class="col-lg-3">
+						<input type="text" name="postcodes" placeholder="职业" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">学历</label>
+					<div class="col-lg-3">
+						<input type="text" name="postcodes" placeholder="学历" class="form-control">
+					</div>
+					<label class="col-lg-1 control-label">手机号</label>
+					<div class="col-lg-3">
+						<input type="text" name="postcodes" placeholder="手机号" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">账户受益人</label>
+					<div class="col-lg-3">
+						<input type="text" name="postcodes" placeholder="账户受益人" class="form-control">
+					</div>
+					<label class="col-lg-1 control-label">实际控制人</label>
+					<div class="col-lg-3">
+						<input type="text" name="postcodes" placeholder="实际控制人" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-lg-3 control-label">不良</label>
+					<div class="col-lg-3">
+						<input type="text" name="postcodes" placeholder="不良" class="form-control">
+					</div>
+					<label class="col-lg-1 control-label">纳税人居民身份证</label>
+					<div class="col-lg-3">
+						<input type="text" name="postcodes" placeholder="纳税人居民身份证" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="submit" value="提交" class="btn btn-success col-lg-4 col-lg-offset-4">
+				</div>
+			</form>
+		</div>
+		<div class="page-bottom">
+			<div class="row">
+				<label class="col-lg-4 sr-only">尾部</label>
+				<div class="col-lg-8 col-lg-offset-2">
+					<p class="text-center">版权所有 @ 2019晓证券股份有限公司版权所有</p>
+					<p class="text-center">All Rights Reserved @ 2019 Xiao Securities Co., Ltd. All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

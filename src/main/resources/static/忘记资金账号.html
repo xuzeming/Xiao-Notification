@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>资金账号找回</title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			.whole{
+				width: 1197px;
+				height: 778px;
+				padding-top: 30px;
+				margin: auto;
+			}
+			.head{
+				width: 60%;
+				height: 600px;
+				margin: auto;
+				border: 1px solid silver;
+			}
+			form{
+				margin-left:100px;
+				padding: 15px;
+			}
+			.head-one{
+				width: 90%;
+				height: 50px;
+				margin-top: 60px;
+				padding-top: 15px;
+				border: 1px solid whitesmoke;
+			}
+			.head-one-left{
+				width: 5px;
+				height: 20px;
+				float: left;
+				background-color: #FF8C00;
+			}
+			.head-one-right{
+				height: 20px;
+				margin-left: 10px;
+				margin-top: 15px;
+				font-size: 18px;
+			}
+			font{
+				font-size: 18px;
+			}
+			input{
+				height: 30px;
+				width: 200px;
+				border: none;
+			}
+			.input{
+				margin-left: 120px;
+				margin-top: 40px;
+				background-color: #FF8C00;
+				height: 40px;
+				font-size: 20px;
+				color: white;
+				border-radius: 6px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="whole">
+			<div class="head">
+				<form action="" method="post">
+					<div  style="width: 90%;height:40px; ">
+						<div class="head-one-left">
+						</div>
+						<div class="head-one-right">
+							找回资金账号
+						</div>
+					</div>
+					<div class="head-one">
+						<font>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名 :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="text" name="" id="" value=""  placeholder="请输入您的姓名"/>
+						</font>
+					</div>
+					<span  style="color: red;">
+						*姓名不能为空且必须输入中文
+					</span>
+					<div class="head-one">
+						<font>身份证号 :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="text" name="" id="" value=""  placeholder="请输入身份证号"/></font>
+					</div>
+					<span  style="color: red;">
+						*你输入的身份证长度或格式错误
+					</span>
+					<div class="head-one">
+						<font>手机号码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="text" name="" id="" value=""  placeholder="请输入开户时绑定的手机号"/></font>
+					</div>
+					<span  style="color: red;">
+						*请输入正确的手机号码
+					</span><br />
+					<input type="submit" value="下一步" class="input"/>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

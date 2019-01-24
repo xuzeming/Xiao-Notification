@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>银证转账</title>
+     <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="../jquery.min.js"></script>
+    <script src="../bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header" >
+                <img id="headImg" src="img/upload.png"/>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="" style="text-align: center;margin-top: 50px;">
+            <h1 style="color: #2e6da4">银证转账</h1>
+        </div>
+        <div style="width: 800px;margin-left: 250px;margin-top: 70px;">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">选择银行:</label>
+                    <div class="col-sm-3">
+                        <select class="form-control">
+                            <option>请选择银行</option>
+                            <option>工商银行</option>
+                            <option>中国银行</option>
+                            <option>农业银行</option>
+                            <option>建设银行</option>
+                            <option>兴业银行</option>
+                            <option>民生银行</option>
+                            <option>花旗银行</option>
+                        </select>
+                    </div>
+                </div>
+                <!--出入金选择-->
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">出入金选择:</label>
+                    <div class="col-sm-3">
+                        <select class="form-control">
+                            <option>请选择</option>
+                            <option>出金</option>
+                            <option>入金</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="form-control" id="">
+                            <option>请选择</option>
+                            <option>银行-期货</option>
+                            <option>期货-银行</option>
+                        </select>
+                    </div>
+                </div>
+                <!--输入金额-->
+                <div class="form-group" >
+                    <label class="col-sm-3 control-label">请输入金额:</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control " placeholder="请输入金额" required="required" >
+                    </div>
+                </div>
+                <!--请输入密码-->
+                <div class="form-group" >
+                    <label class="col-sm-3 control-label">请输入密码:</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control " placeholder="请输入密码" required="required" pattern="[A-z]{3}">
+                    </div>
+                </div>
+                <!--提交-->
+                <div class="form-group" style="margin-left: 150px">
+                    <label class=""></label>
+                    <div class="col-sm-3">
+                        <button type="submit" class="btn btn-primary btn-lg col-md-8">提交</button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="submit" class="btn btn-success btn-lg col-md-8">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

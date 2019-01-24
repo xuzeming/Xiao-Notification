@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link type="text/css" rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css" />
+		<style>
+			
+			table {
+				width: 90%;
+				border-collapse: collapse;
+				margin-left: 5%; 
+				margin-right: 5%;
+			}
+			table th {
+				height: 20px;
+				border: solid 1px #B0C4DE;
+				padding: 5px;
+				background-color: #F0F0F0;
+				text-align: center;
+			}
+			
+			table td {
+				height: 20px;
+				border: solid 1px #B0C4DE;
+				padding: 5px;
+				text-align: center;
+			}
+			
+			#button{
+				width: 80px;
+				height: 30px;
+				border-radius:5px 5px;
+				background-color: #6495ED;
+				color: 	white;
+				margin-left: 200px;
+			}
+			
+			#box {
+				width: 90%;
+				height: 120px;
+				background: #F0F0F0;
+				border: hidden;
+				margin-left: 5%;
+			}
+			
+			.styleInBox{
+				float: left;
+				margin-top: 20px;
+				margin-left: 10%;
+			}
+			option{
+				width: 80px;
+			}
+		</style>
+		
+		
+	</head>
+	<body>
+		<div style="margin-left: 20px;">
+			<h1><font color="00CCCC">用户审核</font></h1>
+		</div>	
+		<div style="margin-left: 5%;">
+			<h2>审核</h2>
+		</div>
+		<div id="box">
+			<div class = "styleInBox">
+				<span>编号:</span>
+				<input type="text" name="" id="Id" placeholder="请输入编号"/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span>姓名:</span>
+				<input type="text" name="" id="personName" placeholder="请输入姓名" />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span>提交时间:</span><input type="text"/>--<input type="text"/>
+			</div>
+			<div class = "styleInBox">
+				<span>身份证审核状态:</span>
+				<select name="">
+					<option value="">请选择</option>
+					<option value="">未审核</option>
+					<option value="">已通过</option>
+					<option value="">未通过</option>
+				</select>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span>详细信息审核状态:</span>
+				<select name="">
+					<option value="">请选择</option>
+					<option value="">未审核</option>
+					<option value="">已通过</option>
+					<option value="">未通过</option>
+				</select>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<span>视频审核状态:</span>
+				<select name="">
+					<option value="">请选择</option>
+					<option value="">未审核</option>
+					<option value="">已通过</option>
+					<option value="">未通过</option>
+				</select>
+				<input type="button" name="button" id="button" value="搜索" />
+			</div>
+
+		</div>
+
+		<br />
+		<hr style="float: left; margin-left: 5%;" width="90%" />				
+
+		<div id="a" >
+			<table>
+				<tr>
+					<th width="3%">
+						<input type="checkbox" name="" id="" value="" />
+					</th>
+					<th width="">编号</th>
+					<th width="">姓名</th>
+					<th width="">身份审核</th>
+					<th width="">详细信息审核</th>
+					<th width="">视频审核</th>
+					<th width="">提交时间</th>
+					<th width="">状态</th>
+					<th width="">操作</th>
+				</tr>
+				<tr>
+					<th width="3%">
+						<input type="checkbox" name="" id="" value="" />
+					</th>
+					<td>001</td>
+					<td class="colorOfCodeAndName">胡彦斌</td>
+					<td class="colorOfCodeAndName">已通过</td>
+					<td>未审核</td>
+					<td style="color: greenyellow;">
+						未审核
+					</td>
+					<td>2019-1-1</td>
+					<td>进行中</td>
+					<td style="color: greenyellow;">
+						<a href="guanLiYuanTongzi.html">通知</a>
+						<a href="#">总审</a>
+					</td>
+				</tr>
+				<tr>
+						<td colspan="9" class="td">
+							<a href="#">上一页</a>&nbsp;&nbsp;&nbsp;
+							<a href="#">1</a>&nbsp;&nbsp;&nbsp;
+							<a href="#">2</a>&nbsp;&nbsp;&nbsp;
+							<a href="#">3</a>&nbsp;&nbsp;&nbsp;
+							<a href="#">4</a>&nbsp;&nbsp;&nbsp;
+							<a href="#">5</a>&nbsp;&nbsp;&nbsp;
+							<a href="#">6</a>&nbsp;&nbsp;&nbsp;
+							<a href="#">下一页</a>&nbsp;&nbsp;&nbsp;
+							跳转<input type="text" name="" value="3" size="1"/>页
+						</td>
+					
+					</tr>
+			</table>
+		</div>
+		
+		<div style="text-align: center;">
+			<div id="pagination"></div>
+		</div>
+		
+
+		<script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jqPaginator.js"></script>
+		<script type="text/javascript">
+			$.jqPaginator('#pagination', {
+				totalPages: 100,
+				visiblePages: 10,
+				currentPage: 1,
+				wrapper: '<ul class="pagination"></ul>',
+				first: '<li class="first"><a href="javascript:void(0);">First</a></li>',
+				prev: '<li class="prev"><a href="javascript:void(0);">Previous</a></li>',
+				next: '<li class="next"><a href="javascript:void(0);">Next</a></li>',
+				last: '<li class="last"><a href="javascript:void(0);">Last</a></li>',
+				page: '<li class="page"><a href="javascript:void(0);">{{page}}</a></li>',
+				onPageChange: function(num) {
+					$('#p').text(num);
+				}
+			});
+		</script>
+		
+		
+		
+		
+		
+	</body>
+	
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>充值</title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			.whole{
+				width: 60%;
+				padding-top: 20px;
+				height: 787px;
+				margin: auto;
+				border: 1px solid whitesmoke;
+			}
+			.head{
+				height: 40px;
+				width: 100%;
+			}
+			.head-one{
+				width: 10px;
+				height:10px;
+				margin-left:50px;
+				margin-top: 15px;
+				float: left;
+				background-color: red;
+			}
+			.head-two{
+				width: 100px;
+				float: left;
+				margin-left: 10px;
+				margin-top: 5px;
+				font-size: 20px;
+			}
+			.tail{
+				width: 80%;
+				height: 600px;
+				margin-left: 80px;
+				margin-top: 40px;
+				border: 1px solid honeydew;
+			}
+			.tail-one{
+				width: 100%;
+				
+				padding-top:10px;
+				height: 40px;
+				border:1px solid azure ;
+				margin-top: 40px;
+			}
+			font{
+				font-size: 20px;
+			}
+			
+			select {
+				width: 300px;
+				font-size: 16px;
+				height: 30px;
+				border: none;
+				text-align: center;
+			}
+			input{
+				width: 300px;
+				font-size: 16px;
+				height: 30px;
+				border: none;
+			}
+			.inpu{
+				margin-top: 60px;
+				height: 40px;
+				width:300px;
+				margin-left: 220px;
+				font-size: 26px;
+				color: white;
+				background-color: #FF8C00;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="whole">
+			<div class="head">
+				<div class="head-one">
+				</div>
+				<div class="head-two">
+					<b>充值</b>
+				</div>
+			</div>
+			<hr style="margin-top: 20px;width: 90%;margin-left: 40px ;"/>
+			<div class="tail">
+				<form action="qianIndex.html" >
+					<div class="tail-one">
+						<font>
+							选择银行卡:&nbsp;&nbsp;&nbsp;&nbsp;
+							<select id="aaa">
+								<option value="0">请选择银行卡</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</font>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="#">新增银行卡</a>
+					</div>
+					<div class="tail-one">
+						<font>
+							充&nbsp;值&nbsp;金&nbsp;额:&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="text" name="" id="" value="" placeholder="请输入充值金额"/>
+						</font>
+					</div>
+					<div class="tail-one">
+						<font>
+							手&nbsp;机&nbsp;号&nbsp;码:&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="text" name="" id="" value="" placeholder="请输入绑定手机号"/>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="button" name="" id="" value="获取验证码" 
+								style="background-color: #FF8C00;color: white;border-radius: 7px; width:90px;"/>
+						</font>
+					</div>
+					<div class="tail-one">
+						<font>
+							动态验证码:&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="text" name="" id="" value="" placeholder="请输入手机动态验证码"/>
+						</font>
+					</div>
+					<input type="submit" value="充值" class="inpu"/>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

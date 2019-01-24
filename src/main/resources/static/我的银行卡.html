@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的银行卡</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			/*整体*/
+			#whole{
+				width: 1195px;
+				margin: auto;
+				height: 800px;
+			}
+			.head{
+				height:50px;
+				width: 100%;
+				margin-top: 10px;
+			}
+			.head-one{
+				width: 10px;
+				height: 10px;
+				margin-top: 15px;
+				float:left;
+				margin-left:60px;
+				background-color: red;
+			}
+			.head-two{
+				float: left;
+				margin-top: 5px;
+				margin-left: 10px;
+			}
+			.tail{
+				margin: auto;
+				width: 90%;
+				margin-top: 40px;
+				text-align: center;
+			}
+			table{
+				width: 100%;
+			}
+			th{
+				height: 50px;
+			}
+			tr{
+				height: 40px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<!--
+        	作者：1476899133@qq.com
+        	时间：2019-01-16
+        	描述：整体样式
+        -->
+		<div id="whole">
+			<div class="head">
+				<div class="head-one">
+				</div>
+				<div class="head-two">
+					<h3>我的银行卡</h3>
+				</div>
+			</div>
+			<hr style="width: 90%;margin: auto;" />
+			<!--
+            	作者：1476899133@qq.com
+            	时间：2019-01-16
+            	描述：尾部
+           -->
+				
+			<div class="tail">
+				<table border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<th class="text-center" colspan="4">银行卡详情</th>
+						<th class="text-center"><a href="bangDing.html" class="btn btn-info">新增银行卡</a></th>
+					</tr>
+					<tr>
+						<td>银行卡号</td>
+						<td>关联资金账号</td>
+						<td>资金余额</td>
+						<td>可取余额</td>
+						<td>操作</td>
+					</tr>
+					<tr>
+						<td>67462**********3160</td>
+						<td>321654952341</td>
+						<td>1.53</td>
+						<td>1.53</td>
+						<td><a href="#">解绑银行卡</a></td>
+					</tr>
+					<tr>
+						<td>67462**********3160</td>
+						<td>321654952341</td>
+						<td>1.53</td>
+						<td>1.53</td>
+						<td><a href="#">解绑银行卡</a></td>
+					</tr>
+				</table>
+			</div>
+		
+		</div>
+	</body>
+</html>

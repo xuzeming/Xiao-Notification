@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>手机号账号验证</title>
+		<script src="js/60miao.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.whole{
+				width: 700px;
+				height: 600px;
+				margin: auto;
+				margin-top: 30px;
+				padding-top: 20px;
+			}
+			.head{
+				width: 90%;
+				margin: auto;
+			}
+			.head-one{
+				width: 500px;
+				height: 40px;
+				margin-top:60px;
+				padding-top: 10px;
+				border: 1px solid darkgray;
+			}
+			input{
+				width: 290px;
+				height: 30px;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="whole">
+			<div class="head">
+				<font>尊敬的客户:</font><br />
+				<font style="font-size: 14px;">如果你忘记了交易密码或资金密码,请如实填写一下信息!</font>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="资金账号验证.html">通过资金账号验证</a>
+				<form action="" method="post">
+					<div class="head-one">
+						<font>
+							用户名:&nbsp;&nbsp;&nbsp;
+							<input type="text" name="" id="" value="" placeholder="请输入用户名" /> 
+						</font>
+					</div>
+					<div class="head-one">
+						<font>
+							手机号:&nbsp;&nbsp;&nbsp;
+							<input type="text" name="" id="" value="" placeholder="请输入手机号" />
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="button" name="" id="" value="获取验证码"  onclick="settime(this)"
+								style="background-color: #FF8C00;color: white;border-radius: 7px; width:80px;"/>
+						</font>
+					</div>
+					<div class="head-one">
+						<font>
+							验证码:&nbsp;&nbsp;&nbsp;
+							<input type="text" name="" id="" value="" placeholder="请输入手机动态验证码" />
+						</font>
+					</div>
+					<input type="submit" value="下一步"
+					 style="background-color: #FF8C00;color: white;margin-top: 50px;height:40px;border-radius:10px;
+					 font-size: 20px; margin-left: 100px;"/>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

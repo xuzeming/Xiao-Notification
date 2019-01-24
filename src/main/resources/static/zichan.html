@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<style type="text/css">
+			#box1 {
+				width: 90%;
+				height: 50px;
+				background: #F0F0F0;
+				border: hidden;
+				margin-left: 5%;
+			}
+			
+			#box2 {
+				width: 90%;
+				height: 50px;
+				background: #F0F0F0;
+				border: hidden;
+				margin-left: 5%;
+				margin-top: 50px;
+			}
+			
+			.in_box {
+				float: left;
+				margin-top: 13px;
+				margin-left: 10px;
+			}
+			.colorOfCodeAndName{
+				color: blue;
+			}
+			
+			
+		</style>
+
+		<style>
+			table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+			
+			table th {
+				height: 20px;
+				border: solid 1px #B0C4DE;
+				padding: 5px;
+				background-color: #F0F0F0;
+				text-align: center;
+			}
+			
+			table td {
+				height: 20px;
+				border: solid 1px #B0C4DE;
+				padding: 5px;
+				text-align: center;
+			}
+			
+			/*			
+			p{
+				text-align: center;
+			}
+*/
+		</style>
+		<link type="text/css" rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css" />
+
+	</head>
+
+	<body>
+
+		<div style="margin-left: 20px;">
+			<h1><font color="00CCCC">资产明细</font></h1>
+		</div>
+
+		<div id="box1">
+			<div class="in_box">
+				<p style="">
+					<font size="4">
+						<span>账户余额</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span>余额:&nbsp;&nbsp;<label id="">0.85</label>元</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span>每日收益:&nbsp;&nbsp;<label id="">0.85</label>元</span>
+					</font>
+				</p>
+			</div>
+		</div>
+
+		<div id="box2">
+			<div class="in_box">
+				<p style="">
+					<font size="4">
+						<span>股票产品</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span>总额:&nbsp;&nbsp;<label id="">0.85</label>元</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span>估算持仓盈亏:&nbsp;&nbsp;<font color="red">0.85</font>元</span>
+					</font>
+				</p>
+			</div>
+		</div>
+		<br />
+		<hr />
+
+		<div style="margin-left: 5%;">
+			<h2>我的股票</h2>
+		</div>
+
+		<div id="a" style="align-content: center; margin-left: 5%; margin-right: 5%;">
+			<table>
+				<tr>
+					<th width="15%">序号</th>
+					<th width="20%">代码</th>
+					<th width="25%">名称</th>
+					<th width="20%">金额</th>
+					<th width="20%">持仓盈亏</th>
+				</tr>
+				<tr>
+					<td>001</td>
+					<td class="colorOfCodeAndName">603556</td>
+					<td class="colorOfCodeAndName">海兴电力</td>
+					<td>2643.96</td>
+					<td style="color: greenyellow;">-4623.82</td>
+				</tr>
+				<tr>
+					<td>001</td>
+					<td class="colorOfCodeAndName">600736</td>
+					<td class="colorOfCodeAndName">苏州高新</td>
+					<td>1009.16</td>
+					<td style="color: greenyellow;">-190903</td>
+				</tr>
+			</table>
+		</div>
+
+		<div style="text-align: center;">
+			<div id="pagination"></div>
+		</div>
+		
+
+		<script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jqPaginator.js"></script>
+		<script type="text/javascript">
+			$.jqPaginator('#pagination', {
+				totalPages: 100,
+				visiblePages: 10,
+				currentPage: 1,
+				wrapper: '<ul class="pagination"></ul>',
+				first: '<li class="first"><a href="javascript:void(0);">First</a></li>',
+				prev: '<li class="prev"><a href="javascript:void(0);">Previous</a></li>',
+				next: '<li class="next"><a href="javascript:void(0);">Next</a></li>',
+				last: '<li class="last"><a href="javascript:void(0);">Last</a></li>',
+				page: '<li class="page"><a href="javascript:void(0);">{{page}}</a></li>',
+				onPageChange: function(num) {
+					$('#p').text(num);
+				}
+			});
+		</script>
+	</body>
+
+</html>

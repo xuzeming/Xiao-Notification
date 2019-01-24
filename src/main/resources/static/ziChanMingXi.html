@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1 {
+				width: 90%;
+				height: 50px;
+				background: #F0F0F0;
+				border: hidden;
+				margin-left: 5%;
+			}
+			
+			#box2 {
+				width: 90%;
+				height: 50px;
+				background: #F0F0F0;
+				border: hidden;
+				margin-left: 5%;
+				margin-top: 50px;
+			}
+			
+			.in_box {
+				float: left;
+				margin-top: 13px;
+				margin-left: 10px;
+			}
+		</style>
+
+		<style>
+			table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+			
+			table th {
+				height: 20px;
+				border: solid 1px #B0C4DE;
+				padding: 5px;
+				background-color: #F0F0F0;
+				text-align: center;
+			}
+			
+			table td {
+				height: 20px;
+				border: solid 1px #B0C4DE;
+				padding: 5px;
+				text-align: center;
+			}
+			/*			
+			p{
+				text-align: center;
+			}
+*/
+			#chongzhi{
+				width: 80px;
+				height: 30px;
+				border-radius:5px 5px;
+				background-color: dodgerblue;
+				color: aliceblue;
+				margin-left: 140px;
+			}
+			#goumai{
+				width: 80px;
+				height: 30px;
+				border-radius:5px 5px;
+				background-color: dodgerblue;
+				color: aliceblue;
+				margin-left: 140px;
+			}
+		</style>
+		<link type="text/css" rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css" />
+
+	</head>
+
+	<body>
+
+		<div style="margin-left: 20px;">
+			<h1><font color="00CCCC">资产明细</font></h1>
+		</div>
+
+		<div id="box1">
+			<div class="in_box">
+				<p style="">
+					<font size="4">
+						<span>账户余额</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span>余额:&nbsp;&nbsp;<label id="">0.85</label>元</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span>每日收益:&nbsp;&nbsp;<label id="">0.85</label>元</span>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="#" >充值</a>
+					</font>
+				</p>
+			</div>
+		</div>
+
+		<div id="box2">
+			<div class="in_box">
+				<p style="">
+					<font size="4">
+						<span>股票产品</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span>总额:&nbsp;&nbsp;<label id="">0.85</label>元</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span>估算持仓盈亏:&nbsp;&nbsp;<font color="red">0.85</font>元</span>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="chaKanGuPiao.html" >购买</a>
+					</font>
+				</p>
+			</div>
+		</div>
+		<br />
+		<hr />
+
+		<div style="margin-left: 5%;">
+			<h2>我的股票</h2>
+		</div>
+
+		<div id="a" style="align-content: center; margin-left: 5%; margin-right: 5%;">
+			<table>
+				<tr>
+					<th>序号</th>
+					<th >代码</th>
+					<th>名称</th>
+					<th>金额</th>
+					<th>持仓盈亏</th>
+					<th>操作</th>
+				</tr>
+				<tr>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+					<td>
+						<a href="guPiaoMaiRu.html">买入</a>
+						&nbsp;&nbsp;
+						<a href="guPiaoMaiChu.html">卖出</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+					<td><a href="">买入</a>
+						&nbsp;&nbsp;
+						<a href="">卖出</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+
+		<div id="pagination" align="center">
+		<script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jqPaginator.js"></script>
+		<script type="text/javascript">
+			$.jqPaginator('#pagination', {
+				totalPages: 100,
+				visiblePages: 10,
+				currentPage: 1,
+				wrapper: '<ul class="pagination"></ul>',
+				first: '<li class="first"><a href="javascript:void(0);">First</a></li>',
+				prev: '<li class="prev"><a href="javascript:void(0);">Previous</a></li>',
+				next: '<li class="next"><a href="javascript:void(0);">Next</a></li>',
+				last: '<li class="last"><a href="javascript:void(0);">Last</a></li>',
+				page: '<li class="page"><a href="javascript:void(0);">{{page}}</a></li>',
+				onPageChange: function(num) {
+					$('#p').text(num);
+				}
+			});
+		</script>
+		</div>
+	</body>
+
+</html>

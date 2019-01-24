@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zl.mapper.UserIdentificationMapper">
+	<select id="selectByPage"
+		parameterType="UserIdentificationCondition"
+		resultType="UserIdentification">
+		select * from (select rownum r,t.user_id userID,t.user_name userName,t.identification_id identificationID ,s.status userStatus 
+		from
+		User_Identification t,User_Centers c,User_Status s
+		where
+		c.user_id=t.user_id and s.user_status_id=c.user_status_id
+		<include refid="whereSql" />
+		) t
+		WHERE t.r BETWEEN #{firstPage} AND #{lastPage}
+	</select>
+
+	<sql id="whereSql">
+		<if test="userID != null">
+			and t.user_ID = #{userID}
+		</if>
+		<if test="userName != null and userName !='' ">
+			and t.user_name = #{userName}
+		</if>
+		<if test="identificationID != null">
+			and t.identification_id = #{identificationID}
+		</if>
+		<if test="status != null">
+			and s.status = #{status}
+		</if>
+	</sql>
+</mapper>

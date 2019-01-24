@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zl.mapper.UserNoticeMapper">
+
+	<select id="selectByPage" resultType="UserNotice">
+		select Notice_ID noticeID ,
+		Notice_Title
+		noticeTitle,Notice_Content noticeContent,Notice_Time
+		noticeTime from
+		User_Notice
+	</select>
+
+	<insert id="adduserNotice" parameterType="UserNotice">
+		insert into
+		User_Notice(Notice_ID,User_ID,Notice_Title,Notice_Content,Notice_Time,Readed,A_1,A_2,A_3,A_4,A_5)
+		values(SQ_Notice_ID.Nextval,#{userID},#{noticeTitle},#{noticeContent},sysdate,1,'x','x','x','x','x')
+	</insert>
+
+	<delete id="deleteById" parameterType="java.lang.Integer">
+		delete from User_Notice
+		where Notice_ID=#{id}
+	</delete>
+
+	<select id="queryById" parameterType="java.lang.Integer"
+		resultType="com.zl.pojo.UserNotice">
+		select User_ID userID,Notice_Title noticeTitle,Notice_Content
+		noticeContent from User_Notice where
+		User_ID=#{id}
+	</select>
+</mapper>
